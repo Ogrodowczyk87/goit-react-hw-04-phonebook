@@ -8,12 +8,13 @@ const Contacts = ({ contacts, onDelete }) => {
             <div >
                 <h1 >Contacts</h1>
                 <ul >
-                    {contacts.length === 0 ? 'There is no contact added' : contacts.map((contacts) => {
-                        return <li key={contacts.id}>
-                            {contacts.name}: {contacts.number}
-                            <button onClick={() => onDelete(contacts.id)}>Delete</button>
+                    {contacts.length === 0 ? 'There is no contact' : contacts.map((contact) => {
+                        return <li key={contact.id}>
+                            {contact.name}: {contact.number}
+                            <button onClick={() => onDelete(contact.id)}>Delete</button>
                         </li>
                     })}
+
                 </ul>
             </div>
         )
@@ -22,6 +23,7 @@ const Contacts = ({ contacts, onDelete }) => {
     }
 
 }
+
 
 Contacts.propTypes = {
     contacts: PropTypes.arrayOf(PropTypes.shape({
