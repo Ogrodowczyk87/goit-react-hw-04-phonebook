@@ -1,4 +1,4 @@
-import css from './Filter.module.css';
+// import css from './Filter.module.css';
 import PropTypes from 'prop-types';
 
 const Filter = ({ filter, onGetFilterData }) => {
